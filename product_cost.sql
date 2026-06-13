@@ -1,1 +1,0 @@
-ALTER TABLE `products` ADD `products_cost` DECIMAL( 15, 4 ) DEFAULT '0.0000' NOT NULL AFTER `products_price` ;
