@@ -22,12 +22,12 @@ class zcObserverProductsCostDisplay extends base
         // Only watching for notifications from a product's edit/update.
         //
         global $current_page;
-        if ($current_page !== FILENAME_PRODUCT . '.php') {
+        if ($current_page === FILENAME_PRODUCT . '.php') {
             // -----
             // Add the list of notifications to be handled.
             //
             $this->attach($this, [
-                'NOTIFY_ADMIN_PRODUCT_PRICE_EDIT_BELOW',    //- From collect_info.php
+                'NOTIFY_ADMIN_PRODUCT_PRICE_EDIT_SECTION_TOP',  //- From collect_info.php
                 'NOTIFY_MODULES_UPDATE_PRODUCT_END',        //- From update_product.php
                 'NOTIFY_MODULES_COPY_TO_CONFIRM_DUPLICATE', //- From copy_product_confirm.php
             ]);
@@ -42,7 +42,7 @@ class zcObserverProductsCostDisplay extends base
         }
     }
 
-    protected function updateNotifyAdminProductPriceEditBelow(&$class, string $e, $pInfo, array &$additional_fields): void
+    protected function updateNotifyAdminProductPriceEditSectionTop(&$class, string $e, $pInfo, array &$additional_fields): void
     {
         $products_cost = $pInfo->products_cost ?? 0.0000;
         $additional_fields[] = [
