@@ -1,6 +1,6 @@
 <?php
 return [
-    'pluginVersion' => 'v2.0.0',
+    'pluginVersion' => 'v2.1.0',
     'pluginName' => 'Product Cost Display',
     'pluginDescription' => 'This admin-only plugin adds a <code>products_cost</code> field to your database\'s <code>products</code> table, where you can save your cost of the product.',
     'pluginAuthor' => 'Vinos de Frutas Tropicales (lat9)',

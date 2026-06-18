@@ -7,5 +7,6 @@
  * @version $Id: msrp.php 15757 2010-03-31 19:13:24Z drbyte $
  */
 return [
+    'TABLE_HEADING_COST' => 'Cost',
     'TEXT_PRODUCTS_PRICE_COST' => 'Products Cost:',
 ];
